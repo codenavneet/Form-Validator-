@@ -3,6 +3,7 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
+//The above block links the JS variables with the corresponding IDs in the source page.
 
 // Show input error message
 function showError(input, message) {
@@ -75,7 +76,7 @@ function getFieldName(input) {
 // Event listeners
 form.addEventListener('submit', function(e) {
   e.preventDefault();
-
+  //The following code is the driver code for the validations
   if(!checkRequired([username, email, password, password2])){
     checkLength(username, 3, 15);
     checkLength(password, 6, 25);
